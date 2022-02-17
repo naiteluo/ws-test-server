@@ -1,0 +1,33 @@
+{
+  "name": "ws-test-server",
+  "version": "1.0.0",
+  "description": "handy ws server for fast demo sketching.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update:container": "docker build -t wstestserver . && docker rm -f 'wstestserver' && docker run --name wstestserver -dp 3111:4111 wstestserver",
+    "start:runtime": "pm2-runtime start ecosystem.config.js --watch",
+    "start": "pm2 start ecosystem.config.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naiteluo/ws-test-server.git"
+  },
+  "keywords": [
+    "webscoket",
+    "ws"
+  ],
+  "author": "naiteluo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/naiteluo/ws-test-server/issues"
+  },
+  "homepage": "https://github.com/naiteluo/ws-test-server#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "pm2": "^5.1.2",
+    "socket.io": "^4.4.1",
+    "socket.io-client": "^4.4.1"
+  }
+}
