@@ -22,7 +22,7 @@ const io = new Server(server, {
 io.on("connection", async (socket) => {
   console.log("connection on");
   socket.on("msg", (data) => {
-    socket.emit("msg", data);
+    io.emit("msg", data);
   });
 });
 

@@ -27,6 +27,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.3",
     "pm2": "^5.1.2",
+    "protobufjs": "^6.11.2",
     "socket.io": "^4.4.1",
     "socket.io-client": "^4.4.1"
   }
